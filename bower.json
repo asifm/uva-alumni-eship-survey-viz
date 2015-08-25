@@ -1,0 +1,23 @@
+{
+  "name": "xf",
+  "main": "xf.js",
+  "version": "0.0.0",
+  "authors": [
+    "asifm <asif.mehedi@live.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "crossfilter": "~1.3.12",
+    "d3": "~3.5.6",
+    "dc.js": "~1.7.3",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}
