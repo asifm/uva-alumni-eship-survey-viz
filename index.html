@@ -1,43 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-
     <title>Entrepreneurship among the University of Virginia Alumni</title>
     <!-- Google font -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'> -->
-    
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
     <!-- Library CSS  -->
     <link rel="stylesheet" href="bower_components/dc.js/dc.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-
     <!-- My CSS -->
     <link rel="stylesheet" href="css/main.css">
-
     <!-- Library JS -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/crossfilter/crossfilter.js"></script>
     <script src="bower_components/dc.js/dc.js"></script>
-
 </head>
 
 <body>
     <div class="container">
-        <h1>Entrepreneurship among the University of Virginia Alumni</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quos quisquam porro saepe magnam eligendi, voluptas quidem! Tempora, suscipit perferendis eligendi laboriosam doloremque voluptates delectus id reprehenderit laborum, inventore non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem adipisci quae reiciendis culpa. Doloremque consectetur exercitationem commodi id quo amet quasi, voluptate totam nulla voluptatem deleniti alias! Velit, temporibus? Beatae.
-        </p>
-        <div id="birth"> </div>
-        <div id="race"> </div>
-
-        <div id="gender"> </div>
-        <div id="entrepreneur"> </div>
-        <div id="founder"> </div>
-        <div id="early-emp"> </div>
+        <header>
+            <br>
+            <!-- <h1>Entrepreneurship among the University of Virginia Alumni</h1> -->
+            <h1><mark>Entrepreneurship</mark> among the <img src="img/uva-logo.jpg" alt=""> Alumni</h1>
+        </header>
+        <!-- <hr class="hr">  -->
+        <p>&nbsp;</p>
+        <button class="btn btn-xs reset-all">Reset All</button>
+        <div class="row">
+            <div class="col-md-2" id="founder">
+                <h5>Founder</h5>
+            </div>
+            <div class="col-md-2" id="early-emp">
+                <h5>Early Employee</h5>
+            </div>
+            <div class="col-md-2" id="investor">
+                <h5>Investor</h5>
+            </div>
+            <div class="col-md-2" id="board-member">
+                <h5>Board Member</h5>
+            </div>
+            
+            <div class="col-md-4 border" id="entrepreneur">
+                <h4>Entrepreneurial <small>in any of these four roles.</small></h4>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h3>Age and Entrepreneurship <button class="btn btn-xs reset-all">Reset All</button></h3>
+            <div class="col-md-6" id="birth">
+                <h5>Number of Alumni by Year of Birth <button class="btn btn-xs" id="reset-birth">Reset</button></h5>
+            </div>
+            <div class="col-md-6" id="first-venture">
+                <h5>Number of Alumni by Age at First Venture <button class="btn btn-xs" id="reset-first-venture">Reset</button></h5>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h3>Demographics and Entrepreneurship <button class="btn btn-xs reset-all">Reset All</button></h3>
+            <div class="col-md-3" id="gender">
+                <h5>Gender</h5>
+            </div>
+            <div class="col-md-3" id="instate">
+                <h5>In-state</h5>
+            </div>
+            <div class="col-md-6" id="race">
+                <h5>Race/Ethnicity <button class="btn btn-xs" id="reset-race">Reset</button></h5>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h3>Experience and Entrepreneurship <button class="btn btn-xs reset-all">Reset All</button></h3>
+            
+            <div class="col-md-5" id="inv-uva">
+                <h5>Involvement in U.Va. Entrepreneurship Activities <button class="btn btn-xs" id="reset-inv-uva">Reset</button></h5>
+            </div>
+            <div class="col-md-5" id="inv-innov">
+                <h5>Involvement in Innovation Activities <button class="btn btn-xs" id="reset-inv-innov">Reset</button></h5>
+            </div>
+            <div class="col-md-2" id="small-bus-exp">
+                <h5>Job Experience <br>in Small Business</h5>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h3>Education and Entrepreneurship <button class="btn btn-xs reset-all">Reset All</button></h3>
+            <div class="col-md-6" id="last-deg">
+                <h5>Last Degree Obtained <button class="btn btn-xs" id="reset-last-deg">Reset</button></h5>
+            </div>
+            <div class="col-md-6" id="last-field">
+                <h5>Field of Last Degree <button class="btn btn-xs" id="reset-last-field">Reset</button></h5>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4" id="num-vent">
+                <h5>Number of Alumni by Number of Ventures Created <button class="btn btn-xs" id="reset-num-vent">Reset</button></h5>
+            </div>
+            <div class="col-md-3" id="family-ent">
+                <h5>Entrepreneur(s) <br>among Family or Friends</h5>
+            </div>
+            <div class="col-md-5">
+                <p class="lead">
+                    For details about this survey, please see our <a href="http://web3.darden.virginia.edu/uva-alumni">main report</a>.
+                </p>
+                <p>
+                    Note that for this visualization we excluded the observations that have no data about birth year, gender, state of residency at matriculation, or race/ethnicity. Such non-responses were not systematic (that is, they were not biased in any particular direction), hence this exclusion does not alter the distributions of any of the variables in any significant way but makes the visulization cleaner.
+                </p>
+                <p>
+                    Observations in the main dataset: 22,757
+                    <br> Observations in the dataset used here: 16,247
+                </p>
+            </div>
+        </div>
+        <br><br><br><br><br>
+    </div>
+    <div id="stat">
+        
     </div>
     <script src="js/main_xf.js"></script>
 </body>
