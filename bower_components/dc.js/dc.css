@@ -1,7 +1,5 @@
 div.dc-chart {
     float: left;
-    /*font-family: Georgia;*/
-    font-size: 12px;
 }
 
 .dc-chart rect.bar {
@@ -57,7 +55,7 @@ div.dc-chart {
 }
 
 .dc-chart .axis text {
-    font: 12px;
+    font: 10px sans-serif;
 }
 
 .dc-chart .grid-line {
@@ -199,7 +197,7 @@ div.dc-chart {
 }
 
 .dc-chart g.row text {
-    fill: black;
+    fill: white;
     font-size: 12px;
     cursor: pointer;
 }
