@@ -25,12 +25,6 @@ body {
     text-align: center;
 }
 
-.reset {
-    text-decoration: underline;
-    font-size: 10px;
-    cursor: pointer;
-}
-
 .border {
     border-color: gray;
     border-radius: 4px 4px 4px;
@@ -38,6 +32,7 @@ body {
     border-width: thin;   
 }
 
+/* The top-right corner for key stats */
 #stat {
     position: fixed;
     height:25px;
@@ -47,4 +42,10 @@ body {
     margin:0px auto;
     top: 0px;
     right: 0px;
+}
+
+/*Modifying dc css*/
+
+.dc-chart g.row text {
+    fill: black;
 }
