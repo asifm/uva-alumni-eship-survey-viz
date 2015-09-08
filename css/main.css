@@ -38,7 +38,7 @@ body {
     height:25px;
     background: white;
     border:1px solid #CCC;
-    width: 100px;
+    width: 250px;
     margin:0px auto;
     top: 0px;
     right: 0px;
@@ -48,4 +48,11 @@ body {
 
 .dc-chart g.row text {
     fill: black;
+}
+
+mark {
+    /*font-weight: 900;*/
+    font-style: italic;
+    border-bottom-style: solid;
+    border-top-style: solid;
 }

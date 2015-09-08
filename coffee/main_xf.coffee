@@ -3,6 +3,7 @@ total_obs = 16247
 basic_num_format = d3.format ".0f"
 k_num_format = d3.format "s"
 percent_num_format = d3.format ",.1%"
+comma_num_format = d3.format ",0f"
 
 process_data = (d) ->
     data = 
@@ -334,7 +335,9 @@ d3.csv('data/alum_xf.csv', process_data, (data) ->
         dc.redrawAll()
 
     write_stat =  -> 
-        $('#stat').text percent_num_format(xf.groupAll().reduceCount().value() / total_obs)
+        selected_num = xf.groupAll().reduceCount().value()
+        $('#stat').text "#{comma_num_format(selected_num)} selected of \
+            #{comma_num_format(total_obs)} | #{percent_num_format(selected_num / total_obs)}"
 
     chart.founderPie.on "filtered", write_stat
     chart.earlyempPie.on "filtered", write_stat
