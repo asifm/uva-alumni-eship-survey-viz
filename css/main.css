@@ -9,6 +9,7 @@ p, li {
 header h1 {
     font-family: Georgia;
     font-size: 36px;
+    color: steelblue;
 }
 
 .hr {
@@ -51,8 +52,9 @@ body {
 }
 
 mark {
-    /*font-weight: 900;*/
-    font-style: italic;
+    /*font-weight: 100;*/
+    /*background-color: none;*/
+    /*font-style: italic;*/
     border-bottom-style: solid;
     border-top-style: solid;
 }
