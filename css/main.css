@@ -8,6 +8,7 @@ p, li {
 
 header h1 {
     font-family: Georgia;
+    font-variant: small-caps;
     font-size: 24px;
     color: steelblue;
 }
@@ -45,16 +46,14 @@ body {
     right: 0px;
 }
 
-/*Modifying dc css*/
-
-.dc-chart g.row text {
-    fill: black;
-}
-
 mark {
-    /*font-weight: 100;*/
-    /*background-color: none;*/
-    /*font-style: italic;*/
+    background-color: transparent;
     border-bottom-style: solid;
     border-top-style: solid;
 }
+
+/*Modifying dc css*************/
+.dc-chart g.row text {
+    fill: black;
+}
+/*****************************/
